@@ -80,11 +80,13 @@ while running:
             if event.key == pygame.K_d and direction != (-20, 0):
                 direction = (20, 0)
             if game_over and event.key == pygame.K_r:
-                        snake = [(300, 300), (280, 300), (260, 300)]
-                        direction = (20, 0)
-                        food = create_food()
-                        game_over = False
-                        score = 0
+             snake = [(300, 300), (280, 300), (260, 300)]
+             direction = (20, 0)
+             food = create_food()
+             game_over = False
+             game_started = True
+             score = 0
+            last_move_time = pygame.time.get_ticks()
 
     # Yılanın hareketi
     current_time = pygame.time.get_ticks()
